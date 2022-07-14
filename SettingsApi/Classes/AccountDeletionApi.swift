@@ -14,7 +14,13 @@ public protocol AccountDeletionApi {
 }
 
 public struct NotificationSettings {
-    let postNotifications: Bool
+    
+    public init(postNotifications: Bool) {
+        self.postNotifications = postNotifications
+    }
+    
+    
+    public let postNotifications: Bool
 }
 
 public protocol SettingsApi {
