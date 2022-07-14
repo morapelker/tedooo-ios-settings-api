@@ -35,6 +35,10 @@ public struct AccountSettings {
     
 }
 
+public struct DeleteAccountResult: Decodable {
+    public let didDelete: Bool
+}
+
 public protocol SettingsApi {
  
     func fetchNotificationSettings() -> AnyPublisher<NotificationSettings, Error>
@@ -45,5 +49,5 @@ public protocol SettingsApi {
     func updateAvatar(avatar: String?) -> AnyPublisher<Any?, Error>
     func updateEmail(toEmail: String) -> AnyPublisher<Any?, Error>
     
-    func deleteAccount() -> AnyPublisher<Any?, Never>
+    func deleteAccount() -> AnyPublisher<DeleteAccountResult?, Never>
 }
