@@ -42,7 +42,6 @@ public protocol SettingsApi {
     
     func updatePassword(oldPassword: String, newPassword: String) -> AnyPublisher<String, NSError>
     func updateSettingItem(item: SettingItem, newValue: Bool) -> AnyPublisher<Any?, Error>
-    func updateLanguage(toLanguage: String) -> AnyPublisher<Any?, Error>
     func updateAvatar(avatar: String?) -> AnyPublisher<Any?, Error>
     func updateEmail(toEmail: String) -> AnyPublisher<Any?, Error>
     
