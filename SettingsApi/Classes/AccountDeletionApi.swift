@@ -36,6 +36,11 @@ public struct AccountSettings {
 }
 
 public struct DeleteAccountResult: Decodable {
+    
+    public init(didDelete: Bool) {
+        self.didDelete = didDelete
+    }
+    
     public let didDelete: Bool
 }
 
