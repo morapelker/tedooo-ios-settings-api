@@ -18,6 +18,15 @@ public struct NotificationSettings {
 
 public struct AccountSettings {
     
+    public init(lastSeen: Bool, localTime: Bool, liveTranslations: Bool, language: String, email: String) {
+        self.lastSeen = lastSeen
+        self.localTime = localTime
+        self.liveTranslations = liveTranslations
+        self.language = language
+        self.email = email
+    }
+    
+    
     public let lastSeen: Bool
     public let localTime: Bool
     public let liveTranslations: Bool
