@@ -16,9 +16,20 @@ public struct NotificationSettings {
     public let postNotifications: Bool
 }
 
+public struct AccountSettings {
+    
+    public let lastSeen: Bool
+    public let localTime: Bool
+    public let liveTranslations: Bool
+    public let language: String
+    public let email: String
+    
+}
+
 public protocol SettingsApi {
  
     func fetchNotificationSettings() -> AnyPublisher<NotificationSettings, Error>
+    func fetchAccountSettings() -> AnyPublisher<AccountSettings, Error>
     
     func updatePassword(oldPassword: String, newPassword: String) -> AnyPublisher<String, NSError>
     func updateSettingItem(item: SettingItem, newValue: Bool) -> AnyPublisher<Any?, Error>
