@@ -7,7 +7,7 @@ public enum SettingItem {
     case localTime
 }
 
-public struct NotificationSettings {
+public struct NotificationSettings: Decodable {
     
     public init(postNotifications: Bool) {
         self.postNotifications = postNotifications
@@ -16,7 +16,7 @@ public struct NotificationSettings {
     public let postNotifications: Bool
 }
 
-public struct AccountSettings {
+public struct AccountSettings: Decodable {
     
     public init(lastSeen: Bool, localTime: Bool, liveTranslations: Bool, language: String, email: String) {
         self.lastSeen = lastSeen
